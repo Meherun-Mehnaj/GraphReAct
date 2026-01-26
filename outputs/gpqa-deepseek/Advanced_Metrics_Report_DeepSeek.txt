@@ -1,0 +1,75 @@
+====================================================================================================
+ADVANCED PERFORMANCE METRICS REPORT - DEEPSEEK
+====================================================================================================
+Generated: 2026-01-26 17:20:13
+
+                           1. CONFUSION MATRIX AND CLASSIFICATION METRICS                           
+----------------------------------------------------------------------------------------------------
+
+ReAct Performance:
+  Total Samples:           198
+  Correct Predictions:      51
+  Incorrect Predictions:   147
+  Accuracy:              25.76%
+  Error Rate:            74.24%
+
+AGoT-ReAct Performance:
+  Total Samples:           198
+  Correct Predictions:      57
+  Incorrect Predictions:   141
+  Accuracy:              28.79%
+  Error Rate:            71.21%
+
+                                2. STATISTICAL SIGNIFICANCE TESTING                                 
+----------------------------------------------------------------------------------------------------
+
+Hypothesis Test: AGoT-ReAct vs ReAct
+  T-statistic:             -0.6757
+  P-value (t-test):       0.499639
+  Chi-square statistic:     0.3183
+  P-value (chi-square):   0.572639
+  Result:               Not Significant (p >= 0.05)
+
+Effect Size Analysis:
+  Cohen's d:                0.0681
+  Interpretation:       Small
+
+                                    3. REASONING STEP STATISTICS                                    
+----------------------------------------------------------------------------------------------------
+
+                                         4. ERROR ANALYSIS                                          
+----------------------------------------------------------------------------------------------------
+
+Metric                                             ReAct      AGoT-ReAct
+----------------------------------------------------------------------------------------------------
+Total Errors                                         147             141
+Error Rate (%)                                     74.24           71.21
+Avg Steps on Correct Answers                        5.00            3.00
+Avg Steps on Incorrect Answers                      4.95            3.00
+
+                                5. EFFICIENCY AND COMPUTATIONAL COST                                
+----------------------------------------------------------------------------------------------------
+
+Computational Efficiency:
+  ReAct Total Steps:               983
+  AGoT-ReAct Total Steps:          594
+  Step Reduction:                  389
+  Reduction Percentage:          39.57%
+
+Average Efficiency:
+  ReAct Avg Steps:                4.96
+  AGoT-ReAct Avg Steps:           3.00
+  Efficiency Gain:               39.57%
+
+                                  6. ANSWER DISTRIBUTION ANALYSIS                                   
+----------------------------------------------------------------------------------------------------
+
+Correct Answer Distribution (Expected):
+  A: 55
+  B: 54
+  C: 48
+  D: 41
+
+====================================================================================================
+END OF REPORT
+====================================================================================================
