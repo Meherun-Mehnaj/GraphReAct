@@ -1,0 +1,89 @@
+================================================================================
+COMBINED RESULTS COMPARISON: REACT VS AGOT-REACT
+================================================================================
+Generated: 2026-01-26
+
+This report compares the performance of React and AGoT-React approaches across
+DeepSeek and Qwen models on GPQA benchmark.
+
+================================================================================
+                        DEEPSEEK MODEL COMPARISON
+================================================================================
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         React vs AGoT-React                                  │
+├─────────────────────────────┬──────────────────┬──────────────────┬─────────┤
+│ Metric                      │ React            │ AGoT-React       │ Delta   │
+├─────────────────────────────┼──────────────────┼──────────────────┼─────────┤
+│ Total Problems              │ 198              │ 198              │ 0       │
+│ Correct Answers             │ 51               │ 57               │ +6      │
+│ Incorrect Answers           │ 147              │ 141              │ -6      │
+│ Overall Accuracy            │ 25.76%           │ 28.79%           │ +3.03%  │
+│                             │                  │                  │         │
+│ Average Steps per Problem   │ 5.0              │ 3.8              │ -1.2    │
+│ Total Reasoning Steps       │ 983              │ 754              │ -229    │
+│ Max Steps per Problem       │ 5                │ 5                │ 0       │
+│ Min Steps per Problem       │ 1                │ 2                │ +1      │
+└─────────────────────────────┴──────────────────┴──────────────────┴─────────┘
+
+KEY FINDINGS (DeepSeek):
+• AGoT-React outperforms React by 3.03% accuracy (28.79% vs 25.76%)
+• AGoT-React is more efficient: 24% fewer average steps (3.8 vs 5.0)
+• AGoT-React reduced total reasoning steps by 229 (23.3% reduction)
+• AGoT-React achieved +6 more correct answers with less computational overhead
+
+
+
+================================================================================
+                         QWEN MODEL COMPARISON
+================================================================================
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         React vs AGoT-React                                  │
+├─────────────────────────────┬──────────────────┬──────────────────┬─────────┤
+│ Metric                      │ React            │ AGoT-React       │ Delta   │
+├─────────────────────────────┼──────────────────┼──────────────────┼─────────┤
+│ Total Problems              │ 198              │ 197              │ -1      │
+│ Correct Answers             │ 66               │ 69               │ +3      │
+│ Incorrect Answers           │ 132              │ 128              │ -4      │
+│ Overall Accuracy            │ 33.33%           │ 35.03%           │ +1.70%  │
+│                             │                  │                  │         │
+│ Average Steps per Problem   │ 4.4              │ 1.9              │ -2.5    │
+│ Total Reasoning Steps       │ 869              │ 381              │ -488    │
+│ Max Steps per Problem       │ 5                │ 3                │ -2      │
+│ Min Steps per Problem       │ 1                │ 1                │ 0       │
+└─────────────────────────────┴──────────────────┴──────────────────┴─────────┘
+
+KEY FINDINGS (Qwen):
+• AGoT-React outperforms React by 1.70% accuracy (35.03% vs 33.33%)
+• AGoT-React is dramatically more efficient: 56.8% fewer average steps (1.9 vs 4.4)
+• AGoT-React reduced total reasoning steps by 488 (56.2% reduction)
+• AGoT-React achieved higher accuracy with significantly less computation
+
+
+================================================================================
+                         CROSS-MODEL COMPARISON
+================================================================================
+
+Overall Best Performance:
+┌─────────────────────────┬──────────┬──────────────────┬───────────────────┐
+│ Model                   │ Method   │ Accuracy         │ Avg Steps         │
+├─────────────────────────┼──────────┼──────────────────┼───────────────────┤
+│ Qwen                    │ AGoT     │ 35.03% (BEST)    │ 1.9 (BEST)        │
+│ Qwen                    │ React    │ 33.33%           │ 4.4               │
+│ DeepSeek                │ AGoT     │ 28.79%           │ 3.8               │
+│ DeepSeek                │ React    │ 25.76% (WORST)   │ 5.0 (WORST)       │
+└─────────────────────────┴──────────┴──────────────────┴───────────────────┘
+
+Model Comparison Insights:
+• Qwen models outperform DeepSeek models across both methods
+• Qwen + AGoT-React achieves the best overall accuracy (35.03%)
+• DeepSeek + React has the worst accuracy (25.76%)
+• Accuracy gap: Qwen models ~6-7% better than DeepSeek models
+
+Efficiency Analysis:
+• AGoT-React consistently more efficient than React on both models
+• DeepSeek efficiency gain: 24% reduction in steps (5.0 → 3.8)
+• Qwen efficiency gain: 56.8% reduction in steps (4.4 → 1.9)
+• Qwen + AGoT shows the most dramatic efficiency improvement
+
